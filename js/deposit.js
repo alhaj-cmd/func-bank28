@@ -25,4 +25,5 @@ document.getElementById('btn-deposite').addEventListener('click', function(){
     // console.log(newDepositAmount,previousDepositTotal);
 
     const newDepositTotal = previousDepositTotal + newDepositAmount;
+    setTextElementValueById('deposit-total', newDepositTotal);
 })
