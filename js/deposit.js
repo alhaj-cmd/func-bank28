@@ -12,8 +12,17 @@ function getElementValueById(elementId){
     return elementValue;
 }
 
+function setTextElementValueById(elementId, newValue){
+    const textElement = document.getElementById(elementId);
+    textElement.innerText = newValue;
+}
+
 
 document.getElementById('btn-deposite').addEventListener('click', function(){
     // console.log('hello')
-    const newDepositAmount = getInputFieldValueById('deposit-field');
+    const newDepositAmount = getInputFieldValueById('deposite-field');
+    const previousDepositTotal = getElementValueById('deposit-total');
+    // console.log(newDepositAmount,previousDepositTotal);
+
+    const newDepositTotal = previousDepositTotal + newDepositAmount;
 })
